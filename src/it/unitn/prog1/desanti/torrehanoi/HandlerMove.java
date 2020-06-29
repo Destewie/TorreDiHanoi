@@ -29,5 +29,9 @@ public class HandlerMove implements EventHandler<ActionEvent>
             g.from.RimuoviDisco();
             g.tdh.btnClear.fireEvent(new ActionEvent());
         }  
+        else
+        {
+            System.out.println("Devi prima definire entrambi i pali di partenza e arrivo");
+        }
     }
 }

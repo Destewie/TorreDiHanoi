@@ -51,9 +51,12 @@ public class TorreDiHanoi extends Application
         
         //parte LEFT
         btnClose = new Button("Close");
+//        btnClose.setOnAction(value);
+        btnClose.setDisable(true);
         
         //parte RIGHT
         btnReset = new Button("Reset");
+        btnReset.setOnAction(new HandlerReset(game));
         btnReset.setAlignment(Pos.CENTER);
         
         //parte BOTTOM
