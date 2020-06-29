@@ -31,7 +31,7 @@ public class HandlerMove implements EventHandler<ActionEvent>
         }  
         else
         {
-            System.out.println("Devi prima definire entrambi i pali di partenza e arrivo");
+            Gioco.CreateWarning("Devi prima definire entrambi i pali di partenza e arrivo", "WARNING!", "Definizione pali");
         }
     }
 }

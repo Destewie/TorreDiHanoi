@@ -26,7 +26,7 @@ public class HandlerFromTo implements EventHandler<MouseEvent>
         Palo source = ((Palo)event.getSource());
         if(source.dischi.size() == 0 && g.from == null)
         {
-            System.out.println("Il palo di partenza deve avere almeno un disco");
+            Gioco.CreateWarning("Il palo di partenza deve avere almeno un disco", "WARNING!", "Non posso partire da questo palo");
         }
         else if(source.dischi.size() > 0 && g.from == null)
         {
@@ -41,9 +41,9 @@ public class HandlerFromTo implements EventHandler<MouseEvent>
                 g.tdh.lblTo.setText(source.id);
             }
             else if(g.from == source)
-                System.out.println("Che senso ha prendere un disco in mano e rimetterlo sullo stesso palo?!?!");
+                Gioco.CreateWarning("Che senso ha prendere un disco in mano e rimetterlo sullo stesso palo?!?!", "WARNING!", "Sei forse poco dotato?!");
             else
-                System.out.println("Il disco di partenza non può essere più grande di quello di arrivo");
+                Gioco.CreateWarning("Il disco di partenza non può essere più grande di quello di arrivo", "WARNING!", "Dimensioni incompatibili");
         } 
     }
     

@@ -26,7 +26,7 @@ public class Gioco extends StackPane
     
     public TorreDiHanoi tdh;
     
-    public Alert alert;
+    public static Alert alert;
     
     public Palo from = null, to = null;
     
@@ -73,15 +73,13 @@ public class Gioco extends StackPane
      
     }
     
-    public void CreateWarning(String infoMessage, String titleBar, String headerMessage)
+    public static void CreateWarning(String infoMessage, String titleBar, String headerMessage)
     {
         alert = new Alert(AlertType.WARNING);
         alert.setTitle(titleBar);
         alert.setHeaderText(headerMessage);
         alert.setContentText(infoMessage);
-        alert.showAndWait();
-        
-        tdh.btnClose.setDisable(false);
+        alert.show();
     }
 
     
