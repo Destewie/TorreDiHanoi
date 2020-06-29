@@ -24,7 +24,6 @@ public class HandlerMove implements EventHandler<ActionEvent>
     @Override
     public void handle(ActionEvent event) 
     {
-        
         if(g.from != null && g.to != null && g.to.AggiungiDisco(g.from.UltimoDisco()))
         {
             g.from.RimuoviDisco();

@@ -34,7 +34,7 @@ public class Palo extends AnchorPane
     public Palo(Gioco g, String id)
     {
         this.id = id;
-        this.addEventHandler(ActionEvent.ACTION, new HandlerFromTo(g));
+        this.addEventHandler(MouseEvent.MOUSE_CLICKED, new HandlerFromTo(g));
         DisegnaBase();
     }
     

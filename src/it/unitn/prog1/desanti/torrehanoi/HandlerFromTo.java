@@ -11,7 +11,7 @@ import javafx.scene.input.MouseEvent;
  *
  * @author Des
  */
-public class HandlerFromTo implements EventHandler<ActionEvent> 
+public class HandlerFromTo implements EventHandler<MouseEvent> 
 {
     Gioco g;
     
@@ -21,7 +21,7 @@ public class HandlerFromTo implements EventHandler<ActionEvent>
     }
     
     @Override
-    public void handle(ActionEvent event) 
+    public void handle(MouseEvent event) 
     {
         Palo source = ((Palo)event.getSource());
         if(source.dischi.size() == 0 && g.from == null)

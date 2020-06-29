@@ -6,6 +6,7 @@ package it.unitn.prog1.desanti.torrehanoi;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.event.EventType;
 import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -42,6 +43,7 @@ public class TorreDiHanoi extends Application
         HBox hbTo = new HBox(lblToText, lblTo);
         
         btnClear = new Button("Clear");
+        btnClear.setOnAction(new HandlerClear(game));
         
         HBox hbTop = new HBox(hbFrom, hbTo, btnClear);
         hbTop.setSpacing(50);
